@@ -18,6 +18,17 @@ mongo = PyMongo(app)
 def view_team():
     return render_template("base.html",
                             team=mongo.db.team.find())
+                            
+@app.route('/new_team')
+def new_team():
+    return render_template("newteam.html",
+                            players=mongo.db.players.find())
+
+@app.route('/add_player', methods=['POST'])
+def add_player():
+    players =  mongo.db.players
+    players.insert_one(request.form.to_dict())
+    return redirect(url_for('view_team'))
 
 
 if __name__ == '__main__':
