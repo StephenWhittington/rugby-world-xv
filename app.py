@@ -16,7 +16,7 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route('/create_team')
 def view_team():
-    return render_template("base.html",
+    return render_template("team.html",
                             team=mongo.db.team.find())
                             
 @app.route('/new_team')
