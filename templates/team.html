@@ -1,0 +1,89 @@
+{% extends 'base.html' %} {% block content %}
+<h3>Create Your Team</h3>
+<div class="row">
+    <form action="{{ url_for('create_team') }}" method="POST" class="col s12">
+        <div class="row">
+            <div class="input-field col s6">
+                <input placeholder="Loose-head Prop" id="loose_head_Prop" name="loose_head_Prop" type="text" class="validate">
+                <label for="loose_head_Prop">1</label>
+            </div>
+            <div class="input-field col s6">
+                <input placeholder="Hooker" id="hooker" name="hooker" type="text" class="validate">
+                <label for="hooker">2</label>
+            </div>
+            <div class="input-field col s6">
+                <input placeholder="Tight-head prop" id="tight_head_prop" name="tight_head_prop" type="text" class="validate">
+                <label for="tight_head_prop">3</label>
+            </div>
+        </div>
+        <div class="row">
+             <div class="input-field col s6">
+                <input placeholder="Blind-side flanker" id="blind_side_flanker" name="blind_side_flanker" type="text" class="validate">
+                <label for="blind_side_flanker">6</label>
+            </div>
+             <div class="input-field col s6">
+                <input placeholder="Second row" id="second_row" name="second_row" type="text" class="validate">
+                <label for="second_row">4</label>
+            </div>
+            <div class="input-field col s6">
+                <input placeholder="Second row" id="second_row" name="second_row" type="text" class="validate">
+                <label for="second_row">5</label>
+            </div>
+            <div class="input-field col s6">
+                <input placeholder="Open-sideflanker" id="open_side_flanker" name="open_side_flanker" type="text" class="validate">
+                <label for="open_side_flanker">7</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6">
+                <input placeholder="Number8" id="number_eight" name="number_eight" type="text" class="validate">
+                <label for="number_eight">8</label>
+            </div>
+        </div>
+        <div clas="row">
+            <div class="input-field col s6">
+                <input placeholder="Scrum-half" id="scrum_half" name="scrum_half" type="text" class="validate">
+                <label for="scrum_half">9</label>
+            </div>
+        </div>
+        <div class="row">
+             <div class="input-field col s6">
+                <input placeholder="Fly-half" id="fly_half" name="fly_half" type="text" class="validate">
+                <label for="fly_half">10</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6">
+                <input placeholder="Inside centre" id="inside_centre" name="inside_centre" type="text" class="validate">
+                <label for="inside_centre">12</label>
+            </div>
+        </div>
+        <div clas="row">
+            <div class="input-field col s6">
+                <input placeholder="Outside center" id="outside_centre" name="outside_centre" type="text" class="validate">
+                <label for="outside_centre">13</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6">
+                <input placeholder="Left wing" id="left_wing" name="left_wing" type="text" class="validate">
+                <label for="left_wing">11</label>
+            </div><div class="input-field col s6">
+                <input placeholder="Right wing" id="right_wing" name="right_wing" type="text" class="validate">
+                <label for="right_wing">14</label>
+            </div>
+        </div>
+        <div clas="row">
+            <div class="input-field col s6">
+                <input placeholder="Full-back" id="full_back" name="full_back" type="text" class="validate">
+                <label for="full_back">15</label>
+            </div>
+        </div>
+    </form>
+    <div class="row">
+            <button class="btn waves-effect waves-light" type="submit" name="action">Save Team
+                <i class="material-icons right">add_circle</i>
+             </button>
+        </div>
+</div>
+{% endblock %}
