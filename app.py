@@ -35,9 +35,9 @@ def create_team():
     return render_template("team.html",
                             team=mongo.db.team.find())
                             
-@app.route('/create_team', methods=['POST'])
+@app.route('/add_team', methods=['POST'])
 def add_team():
-    team =  mongo.db.players
+    team =  mongo.db.team
     team.insert_one(request.form.to_dict())
     return redirect(url_for('create_team'))
 

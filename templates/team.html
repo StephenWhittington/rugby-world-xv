@@ -1,10 +1,10 @@
 {% extends 'base.html' %} {% block content %}
 <h3>Create Your Team</h3>
 <div class="row">
-    <form action="{{ url_for('create_team') }}" method="POST" class="col s12">
+    <form action="{{ url_for('add_team') }}" method="POST" class="col s12">
         <div class="row">
             <div class="input-field col s6">
-                <input placeholder="Loose-head Prop" id="loose_head_Prop" name="loose_head_Prop" type="text" class="validate">
+                <input placeholder="Loose-head Prop" id="loose_head_prop" name="loose_head_prop" type="text" class="validate">
                 <label for="loose_head_Prop">1</label>
             </div>
             <div class="input-field col s6">
@@ -26,11 +26,11 @@
                 <label for="second_row">4</label>
             </div>
             <div class="input-field col s6">
-                <input placeholder="Second row" id="second_row" name="second_row" type="text" class="validate">
-                <label for="second_row">5</label>
+                <input placeholder="Second row" id="second_row_2" name="second_row_2" type="text" class="validate">
+                <label for="second_row_2">5</label>
             </div>
             <div class="input-field col s6">
-                <input placeholder="Open-sideflanker" id="open_side_flanker" name="open_side_flanker" type="text" class="validate">
+                <input placeholder="Open-side flanker" id="open_side_flanker" name="open_side_flanker" type="text" class="validate">
                 <label for="open_side_flanker">7</label>
             </div>
         </div>
@@ -79,11 +79,11 @@
                 <label for="full_back">15</label>
             </div>
         </div>
-    </form>
-    <div class="row">
+         <div class="row">
             <button class="btn waves-effect waves-light" type="submit" name="action">Save Team
                 <i class="material-icons right">add_circle</i>
              </button>
         </div>
+    </form>
 </div>
 {% endblock %}
