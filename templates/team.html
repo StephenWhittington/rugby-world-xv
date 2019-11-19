@@ -4,11 +4,21 @@
     <form action="{{ url_for('add_team') }}" method="POST" class="col s12">
         <div class="row">
             <div class="input-field col s6">
-                <input placeholder="Loose-head Prop" id="loose_head_prop" name="loose_head_prop" type="text" class="validate">
+                <select id="loose_head_Prop" name="loose_head_prop">
+                    <option value="" disabled selected>Choose Player</option>
+                    {% for ply in players %}
+                <option value="{{ply.player_name}}">{{ply.player_name}}</option>
+                 {% endfor %}
+                    </select>
                 <label for="loose_head_Prop">1</label>
             </div>
             <div class="input-field col s6">
-                <input placeholder="Hooker" id="hooker" name="hooker" type="text" class="validate">
+                <select id="hooker" name="hooker">
+                    <option value="" disabled selected>Choose Player</option>
+                    {% for plyr in players %}
+                <option value="{{plyr.player_name}}">{{plyr.player_name}}</option>
+                 {% endfor %}
+                    </select>
                 <label for="hooker">2</label>
             </div>
             <div class="input-field col s6">
@@ -17,11 +27,11 @@
             </div>
         </div>
         <div class="row">
-             <div class="input-field col s6">
+            <div class="input-field col s6">
                 <input placeholder="Blind-side flanker" id="blind_side_flanker" name="blind_side_flanker" type="text" class="validate">
                 <label for="blind_side_flanker">6</label>
             </div>
-             <div class="input-field col s6">
+            <div class="input-field col s6">
                 <input placeholder="Second row" id="second_row" name="second_row" type="text" class="validate">
                 <label for="second_row">4</label>
             </div>
@@ -47,7 +57,7 @@
             </div>
         </div>
         <div class="row">
-             <div class="input-field col s6">
+            <div class="input-field col s6">
                 <input placeholder="Fly-half" id="fly_half" name="fly_half" type="text" class="validate">
                 <label for="fly_half">10</label>
             </div>
@@ -68,7 +78,8 @@
             <div class="input-field col s6">
                 <input placeholder="Left wing" id="left_wing" name="left_wing" type="text" class="validate">
                 <label for="left_wing">11</label>
-            </div><div class="input-field col s6">
+            </div>
+            <div class="input-field col s6">
                 <input placeholder="Right wing" id="right_wing" name="right_wing" type="text" class="validate">
                 <label for="right_wing">14</label>
             </div>
@@ -79,7 +90,7 @@
                 <label for="full_back">15</label>
             </div>
         </div>
-         <div class="row">
+        <div class="row">
             <button class="btn waves-effect waves-light" type="submit" name="action">Save Team
                 <i class="material-icons right">add_circle</i>
              </button>

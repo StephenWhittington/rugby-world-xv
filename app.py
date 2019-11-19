@@ -17,7 +17,7 @@ mongo = PyMongo(app)
 @app.route('/create_team')
 def view_team():
     return render_template("team.html",
-                            team=mongo.db.team.find())
+                            players=mongo.db.players.find())
                             
 @app.route('/new_team')
 def new_team():
@@ -33,7 +33,7 @@ def add_player():
 @app.route('/create_team')
 def create_team():
     return render_template("team.html",
-                            team=mongo.db.team.find())
+                            players=mongo.db.players.find())
                             
 @app.route('/add_team', methods=['POST'])
 def add_team():
