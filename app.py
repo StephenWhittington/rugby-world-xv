@@ -17,23 +17,38 @@ mongo = PyMongo(app)
 @app.route('/create_team')
 def view_team():
     return render_template("team.html",
-                            players=mongo.db.players.find())
+                            first_players_collection=mongo.db.players.find(),
+                            second_players_collection = mongo.db.players.find(),
+                            third_players_collection = mongo.db.players.find(),
+                            fourth_players_collection = mongo.db.players.find(),
+                            fith_players_collection = mongo.db.players.find(),
+                            sixth_players_collection = mongo.db.players.find(),
+                            seventh_players_collection = mongo.db.players.find(),
+                            eighth_players_collection = mongo.db.players.find(),
+                            ninth_players_collection = mongo.db.players.find(),
+                            tenth_players_collection = mongo.db.players.find(),
+                            eleventh_players_collection = mongo.db.players.find(),
+                            twelth_players_collection = mongo.db.players.find(),
+                            thirteenth_players_collection = mongo.db.players.find(),
+                            fourteenth_players_collection = mongo.db.players.find(),
+                            fithteenth_players_collection = mongo.db.players.find())
+
                             
 @app.route('/new_team')
 def new_team():
     return render_template("addplayers.html",
-                            players=mongo.db.players.find())
+                            addplayers=mongo.db.players.find())
 
 @app.route('/add_player', methods=['POST'])
 def add_player():
-    players =  mongo.db.players
-    players.insert_one(request.form.to_dict())
+    addplayers = mongo.db.players
+    addplayers.insert_one(request.form.to_dict())
     return redirect(url_for('create_team'))
     
 @app.route('/create_team')
 def create_team():
     return render_template("team.html",
-                            players=mongo.db.players.find())
+                            first_players_collection=mongo.db.players.find())
                             
 @app.route('/add_team', methods=['POST'])
 def add_team():
