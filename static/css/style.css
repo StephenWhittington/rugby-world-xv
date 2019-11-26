@@ -10,3 +10,20 @@
     justify-content: center;
 }
 
+.select-wrapper {
+    background-color: white;
+}
+
+
+.select-wrapper+label {
+    position: absolute;
+    top: -40px;
+    font-size: 20px;
+    color: yellow;
+}
+
+.input-info {
+    background-color: white;
+}
+
+
