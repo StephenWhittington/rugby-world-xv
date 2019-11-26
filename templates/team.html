@@ -4,17 +4,17 @@
     <form action="{{ url_for('add_team') }}" method="POST" class="col s12">
         <div class="row">
             <div class="input-field col s6">
-                <select id="loose_head_Prop" name="loose_head_prop">
-                    <option value="" disabled selected>Choose Player</option>
+                <select id="loose_head_prop" name="loose_head_prop">
+                    <option value="" disabled selected>Loosehead Prop</option>
                     {% for plyr in first_players_collection %}
                 <option value="{{plyr.player_name}}">{{plyr.player_name}}</option>
                  {% endfor %}
                     </select>
-                <label for="loose_head_Prop">1</label>
+                <label for="loose_head_prop">1</label>
             </div>
             <div class="input-field col s6">
                 <select id="hooker" name="hooker">
-                    <option value="" disabled selected>Choose Player</option>
+                    <option value="" disabled selected>Hooker</option>
                     {% for plyr in second_players_collection %}
                 <option value="{{plyr.player_name}}">{{plyr.player_name}}</option>
                  {% endfor %}
@@ -23,7 +23,7 @@
             </div>
             <div class="input-field col s6">
                 <select id="tight_head_prop" name="tight_head_prop">
-                    <option value="" disabled selected>Choose Player</option>
+                    <option value="" disabled selected>Tighthead Prop</option>
                     {% for plyr in third_players_collection %}
                 <option value="{{plyr.player_name}}">{{plyr.player_name}}</option>
                  {% endfor %}
@@ -34,7 +34,7 @@
         <div class="row">
             <div class="input-field col s6">
                 <select id="blind_side_flanker" name="blind_side_flanker">
-                    <option value="" disabled selected>Choose Player</option>
+                    <option value="" disabled selected>Blindside Flanker</option>
                     {% for plyr in fourth_players_collection %}
                 <option value="{{plyr.player_name}}">{{plyr.player_name}}</option>
                  {% endfor %}
@@ -43,7 +43,7 @@
             </div>
             <div class="input-field col s6">
                 <select id="second_row" name="second_row">
-                    <option value="" disabled selected>Choose Player</option>
+                    <option value="" disabled selected>Second Row</option>
                     {% for plyr in fith_players_collection %}
                 <option value="{{plyr.player_name}}">{{plyr.player_name}}</option>
                  {% endfor %}
@@ -52,7 +52,7 @@
             </div>
             <div class="input-field col s6">
                 <select id="second_row_2" name="second_row_2">
-                    <option value="" disabled selected>Choose Player</option>
+                    <option value="" disabled selected>Second Row</option>
                     {% for plyr in sixth_players_collection %}
                 <option value="{{plyr.player_name}}">{{plyr.player_name}}</option>
                  {% endfor %}
@@ -61,7 +61,7 @@
             </div>
             <div class="input-field col s6">
                 <select id="open_side_flanker" name="open_side_flanker">
-                    <option value="" disabled selected>Choose Player</option>
+                    <option value="" disabled selected>Openside Flanker</option>
                     {% for plyr in seventh_players_collection %}
                 <option value="{{plyr.player_name}}">{{plyr.player_name}}</option>
                  {% endfor %}
@@ -72,7 +72,7 @@
         <div class="row">
             <div class="input-field col s6">
                 <select id="number_eight" name="number_eight">
-                    <option value="" disabled selected>Choose Player</option>
+                    <option value="" disabled selected>Number 8</option>
                     {% for plyr in eighth_players_collection %}
                 <option value="{{plyr.player_name}}">{{plyr.player_name}}</option>
                  {% endfor %}
@@ -83,7 +83,7 @@
         <div clas="row">
             <div class="input-field col s6">
                 <select id="scrum_half" name="scrum_half">
-                    <option value="" disabled selected>Choose Player</option>
+                    <option value="" disabled selected>Scrum Half</option>
                     {% for plyr in ninth_players_collection %}
                 <option value="{{plyr.player_name}}">{{plyr.player_name}}</option>
                  {% endfor %}
@@ -94,7 +94,7 @@
         <div class="row">
             <div class="input-field col s6">
                 <select id="fly_half" name="fly_half">
-                    <option value="" disabled selected>Choose Player</option>
+                    <option value="" disabled selected>Fly Half</option>
                     {% for plyr in tenth_players_collection %}
                 <option value="{{plyr.player_name}}">{{plyr.player_name}}</option>
                  {% endfor %}
@@ -105,7 +105,7 @@
         <div class="row">
             <div class="input-field col s6">
                 <select id="inside_centre" name="inside_centre">
-                    <option value="" disabled selected>Choose Player</option>
+                    <option value="" disabled selected>Inside Centre</option>
                     {% for plyr in eleventh_players_collection %}
                 <option value="{{plyr.player_name}}">{{plyr.player_name}}</option>
                  {% endfor %}
@@ -116,7 +116,7 @@
         <div clas="row">
             <div class="input-field col s6">
                 <select id="outside_centre" name="outside_centre">
-                    <option value="" disabled selected>Choose Player</option>
+                    <option value="" disabled selected>Outside Centre</option>
                     {% for plyr in twelth_players_collection %}
                 <option value="{{plyr.player_name}}">{{plyr.player_name}}</option>
                  {% endfor %}
@@ -127,7 +127,7 @@
         <div class="row">
             <div class="input-field col s6">
                 <select id="left_wing" name="left_wing">
-                    <option value="" disabled selected>Choose Player</option>
+                    <option value="" disabled selected>Left Wing</option>
                     {% for plyr in thirteenth_players_collection %}
                 <option value="{{plyr.player_name}}">{{plyr.player_name}}</option>
                  {% endfor %}
@@ -136,7 +136,7 @@
             </div>
             <div class="input-field col s6">
                 <select id="right_wing" name="right_wing">
-                    <option value="" disabled selected>Choose Player</option>
+                    <option value="" disabled selected>Right Wing</option>
                     {% for plyr in fourteenth_players_collection %}
                 <option value="{{plyr.player_name}}">{{plyr.player_name}}</option>
                  {% endfor %}
@@ -147,7 +147,7 @@
         <div clas="row">
             <div class="input-field col s6">
                <select id="full_back" name="full_back">
-                    <option value="" disabled selected>Choose Player</option>
+                    <option value="" disabled selected>Full Back</option>
                     {% for plyr in fithteenth_players_collection %}
                 <option value="{{plyr.player_name}}">{{plyr.player_name}}</option>
                  {% endfor %}
