@@ -54,12 +54,17 @@ def create_team():
 def add_team():
     team =  mongo.db.team
     team.insert_one(request.form.to_dict())
-    return redirect(url_for('create_team'))
+    return redirect(url_for('manage_team'))
     
 @app.route('/manage_team')
 def manage_team():
     return render_template("manageteam.html",
                             team=mongo.db.team.find())
+
+@app.route('/delete_team/<team_id>')
+def delete_team(team_id):
+    mongo.db.team.remove({'_id': ObjectId(team_id)})
+    return redirect(url_for('manage_team'))
 
 
 if __name__ == '__main__':

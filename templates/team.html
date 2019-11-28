@@ -3,6 +3,12 @@
 <div class="row">
     <form action="{{ url_for('add_team') }}" method="POST" class="col s12">
         <div class="row">
+            <div class="input-field input-info col s6">
+                <input id="team_name" name="team_name" type="text" class="validate">
+                <label for="team_name">Team Name</label>
+            </div>
+        </div>
+        <div class="row">
             <div class="input-field col s4">
                 <select id="loose_head_prop" name="loose_head_prop">
                     <option value="" disabled selected>Loosehead Prop</option>
