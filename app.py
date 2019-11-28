@@ -55,6 +55,11 @@ def add_team():
     team =  mongo.db.team
     team.insert_one(request.form.to_dict())
     return redirect(url_for('create_team'))
+    
+@app.route('/manage_team')
+def manage_team():
+    return render_template("manageteam.html",
+                            team=mongo.db.team.find())
 
 
 if __name__ == '__main__':

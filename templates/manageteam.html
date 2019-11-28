@@ -1,0 +1,46 @@
+{% extends 'base.html' %} {% block content %}
+<div class="row">
+
+    <h3>Manage Your Team</h3>
+    <ul class="collapsible" data-collapsible="accordion">
+        {% for team in team %}
+        <div class="collapsible-header">
+            <a href="" class="waves-effect waves-light btn btn_small">Del</a>
+            <a href="" class="waves-effect waves-light btn btn_small blue">Edit</a>
+
+            <div class="task_header">
+                <ol>
+                    <li><strong>{{team.loose_head_prop}}</strong></li>
+                    <li><strong>{{team.hooker}}</strong></li>
+                    <li><strong>{{team.tight_head_prop}}</strong></li>
+                    <li><strong>{{team.second_row}}</strong></li>
+                    <li><strong>{{team.second_row_2}}</strong></li>
+                    <li><strong>{{team.blind_side_flanker}}</strong></li>
+                    <li><strong>{{team.open_side_flanker}}</strong></li>
+                    <li><strong>{{team.number_eight}}</strong></li>
+                    <li><strong>{{team.scrum_half}}</strong></li>
+                    <li><strong>{{team.fly_half}}</strong></li>
+                    <li><strong>{{team.left_wing}}</strong></li>
+                    <li><strong>{{team.inside_centre}}</strong></li>
+                    <li><strong>{{team.outside_centre}}</strong></li>
+                    <li><strong>{{team.right_wing}}</strong></li>
+                    <li><strong>{{team.full_back}}</strong></li>
+                </ol>
+            </div>
+        </div>
+        </li>
+        {% endfor %}
+
+    </ul>
+</div>
+<div class="row">
+    <a href="" class="waves-effect waves-light btn">
+        <i class="material-icons right">playlist_add</i>Add Category
+    </a>
+</div>
+
+
+
+
+
+{% endblock %}
