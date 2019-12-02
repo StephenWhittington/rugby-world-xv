@@ -65,6 +65,37 @@ def manage_team():
 def delete_team(team_id):
     mongo.db.team.remove({'_id': ObjectId(team_id)})
     return redirect(url_for('manage_team'))
+    
+@app.route('/edit_team/<team_id>')
+def edit_team(team_id):
+    the_task =  mongo.db.team.find_one({"_id": ObjectId(team_id)})
+    all_categories =  mongo.db.team.find()
+    return render_template('editteam.html', team=the_task,
+                           categories=all_categories)
+
+@app.route('/update_team/<team_id>', methods=["POST"])
+def update_team(team_id):
+    team = mongo.db.team
+    team.update( {'_id': ObjectId(team_id)},
+    {
+        'team_name':request.form.get('team_name'),
+        'loose_head_prop':request.form.get('loose_head_prop'),
+        'hooker':request.form.get('hooker'),
+        'tight_head_prop': request.form.get('tight_head_prop'),
+        'blind_side_flanker': request.form.get('blind_side_flanker'),
+        'second_row':request.form.get('second_row'),
+        'second_row_2':request.form.get('second_row_2'),
+        'open_side_flanker':request.form.get('open_side_flanker'),
+        'number_eight':request.form.get('number_eight'),
+        'scrum_half':request.form.get('scrum_half'),
+        'fly_half':request.form.get('fly_half'),
+        'inside_centre':request.form.get('outside_centre'),
+        'outside_centre':request.form.get('outside_centre'),
+        'left_wing':request.form.get('left_wing'),
+        'full_back':request.form.get('full_back'),
+        'right_wing':request.form.get('right_wing')
+    })
+    return redirect(url_for('manage_team'))
 
 
 if __name__ == '__main__':
