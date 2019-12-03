@@ -73,7 +73,20 @@ def edit_team(team_id):
     return render_template('editteam.html', team=the_team,
                            positions=all_positions, 
                            first_players_collection=mongo.db.players.find(),
-                           second_players_collection = mongo.db.players.find())
+                           second_players_collection = mongo.db.players.find(),
+                           third_players_collection = mongo.db.players.find(),
+                           fourth_players_collection = mongo.db.players.find(),
+                           fith_players_collection = mongo.db.players.find(),
+                           sixth_players_collection = mongo.db.players.find(),
+                           seventh_players_collection = mongo.db.players.find(),
+                           eighth_players_collection = mongo.db.players.find(),
+                           ninth_players_collection = mongo.db.players.find(),
+                           tenth_players_collection = mongo.db.players.find(),
+                           eleventh_players_collection = mongo.db.players.find(),
+                           twelth_players_collection = mongo.db.players.find(),
+                           thirteenth_players_collection = mongo.db.players.find(),
+                           fourteenth_players_collection = mongo.db.players.find(),
+                           fithteenth_players_collection = mongo.db.players.find())
 
 @app.route('/update_team/<team_id>', methods=["POST"])
 def update_team(team_id):
