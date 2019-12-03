@@ -11,13 +11,19 @@
         <div class="row">
             <div class="input-field col s4">
                 <select id="loose_head_prop" name="loose_head_prop">
-                <option value="{{team.loose_head_prop}}">{{team.loose_head_prop}}</option>
+                    <option value="{{team.loose_head_prop}}">{{team.loose_head_prop}}</option>
+                    {% for plyr in first_players_collection %}
+                <option value="{{plyr.player_name}}">{{plyr.player_name}}</option>
+                {% endfor %}
                 </select>
                 <label for="loose_head_prop">1</label>
             </div>
             <div class="input-field col s4">
                 <select id="hooker" name="hooker">
                     <option value="{{team.hooker}}">{{team.hooker}}</option>
+                    {% for plyr in second_players_collection %}
+                    <option value="{{plyr.player_name}}">{{plyr.player_name}}</option>
+                    {% endfor %}
                     </select>
                 <label for="hooker">2</label>
             </div>

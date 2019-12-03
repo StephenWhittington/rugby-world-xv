@@ -68,10 +68,12 @@ def delete_team(team_id):
     
 @app.route('/edit_team/<team_id>')
 def edit_team(team_id):
-    the_task =  mongo.db.team.find_one({"_id": ObjectId(team_id)})
-    all_categories =  mongo.db.team.find()
-    return render_template('editteam.html', team=the_task,
-                           categories=all_categories)
+    the_team =  mongo.db.team.find_one({"_id": ObjectId(team_id)})
+    all_positions =  mongo.db.team.find()
+    return render_template('editteam.html', team=the_team,
+                           positions=all_positions, 
+                           first_players_collection=mongo.db.players.find(),
+                           second_players_collection = mongo.db.players.find())
 
 @app.route('/update_team/<team_id>', methods=["POST"])
 def update_team(team_id):
@@ -89,7 +91,7 @@ def update_team(team_id):
         'number_eight':request.form.get('number_eight'),
         'scrum_half':request.form.get('scrum_half'),
         'fly_half':request.form.get('fly_half'),
-        'inside_centre':request.form.get('outside_centre'),
+        'inside_centre':request.form.get('inside_centre'),
         'outside_centre':request.form.get('outside_centre'),
         'left_wing':request.form.get('left_wing'),
         'full_back':request.form.get('full_back'),
