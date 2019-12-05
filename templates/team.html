@@ -13,7 +13,9 @@
                 <select id="loose_head_prop" name="loose_head_prop">
                     <option value="" disabled selected>Loosehead Prop</option>
                     {% for plyr in first_players_collection %}
+                        {% if plyr.position == "Loosehead Prop" %}
                 <option value="{{plyr.player_name}}">{{plyr.player_name}}</option>
+                        {% endif %}
                  {% endfor %}
                     </select>
                 <label for="loose_head_prop">1</label>
@@ -22,7 +24,9 @@
                 <select id="hooker" name="hooker">
                     <option value="" disabled selected>Hooker</option>
                     {% for plyr in second_players_collection %}
+                        {% if plyr.position == "Hooker" %}
                 <option value="{{plyr.player_name}}">{{plyr.player_name}}</option>
+                        {% endif %}
                  {% endfor %}
                     </select>
                 <label for="hooker">2</label>
@@ -31,7 +35,9 @@
                 <select id="tight_head_prop" name="tight_head_prop">
                     <option value="" disabled selected>Tighthead Prop</option>
                     {% for plyr in third_players_collection %}
+                        {% if plyr.position == "Tighthead Prop" %}
                 <option value="{{plyr.player_name}}">{{plyr.player_name}}</option>
+                        {% endif %}
                  {% endfor %}
                     </select>
                 <label for="tight_head_prop">3</label>
@@ -42,7 +48,9 @@
                 <select id="blind_side_flanker" name="blind_side_flanker">
                     <option value="" disabled selected>Blindside Flanker</option>
                     {% for plyr in fourth_players_collection %}
+                        {% if plyr.position == "Flanker" %}
                 <option value="{{plyr.player_name}}">{{plyr.player_name}}</option>
+                        {% endif %}
                  {% endfor %}
                     </select>
                 <label for="blind_side_flanker">6</label>
@@ -51,7 +59,9 @@
                 <select id="second_row" name="second_row">
                     <option value="" disabled selected>Second Row</option>
                     {% for plyr in fith_players_collection %}
+                        {% if plyr.position == "Second Row" %}
                 <option value="{{plyr.player_name}}">{{plyr.player_name}}</option>
+                        {% endif %}
                  {% endfor %}
                     </select>
                 <label for="second_row">4</label>
@@ -60,7 +70,9 @@
                 <select id="second_row_2" name="second_row_2">
                     <option value="" disabled selected>Second Row</option>
                     {% for plyr in sixth_players_collection %}
+                        {% if plyr.position == "Second Row" %}
                 <option value="{{plyr.player_name}}">{{plyr.player_name}}</option>
+                        {% endif %}
                  {% endfor %}
                     </select>
                 <label for="second_row_2">5</label>
@@ -69,7 +81,9 @@
                 <select id="open_side_flanker" name="open_side_flanker">
                     <option value="" disabled selected>Openside Flanker</option>
                     {% for plyr in seventh_players_collection %}
+                        {% if plyr.position == "Flanker" %}
                 <option value="{{plyr.player_name}}">{{plyr.player_name}}</option>
+                        {% endif %}
                  {% endfor %}
                     </select>
                 <label for="open_side_flanker">7</label>
@@ -80,7 +94,9 @@
                 <select id="number_eight" name="number_eight">
                     <option value="" disabled selected>Number 8</option>
                     {% for plyr in eighth_players_collection %}
+                        {% if plyr.position == "Number 8" %}
                 <option value="{{plyr.player_name}}">{{plyr.player_name}}</option>
+                        {% endif %}
                  {% endfor %}
                     </select>
                 <label for="number_eight">8</label>
@@ -91,8 +107,10 @@
                 <select id="scrum_half" name="scrum_half">
                     <option value="" disabled selected>Scrum Half</option>
                     {% for plyr in ninth_players_collection %}
+                        {% if plyr.position == "Scrum Half" %}
                 <option value="{{plyr.player_name}}">{{plyr.player_name}}</option>
-                 {% endfor %}
+                        {% endif %}
+                    {% endfor %}
                     </select>
                 <label for="scrum_half">9</label>
             </div>
@@ -102,7 +120,9 @@
                 <select id="fly_half" name="fly_half">
                     <option value="" disabled selected>Fly Half</option>
                     {% for plyr in tenth_players_collection %}
+                        {% if plyr.position == "Fly-Half" %}
                 <option value="{{plyr.player_name}}">{{plyr.player_name}}</option>
+                        {% endif %}
                  {% endfor %}
                     </select>
                 <label for="fly_half">10</label>
@@ -113,7 +133,9 @@
                 <select id="inside_centre" name="inside_centre">
                     <option value="" disabled selected>Inside Centre</option>
                     {% for plyr in eleventh_players_collection %}
+                        {% if plyr.position == "Inside Centre" %}
                 <option value="{{plyr.player_name}}">{{plyr.player_name}}</option>
+                        {% endif %}
                  {% endfor %}
                     </select>
                 <label for="inside_centre">12</label>
@@ -122,7 +144,9 @@
                 <select id="outside_centre" name="outside_centre">
                     <option value="" disabled selected>Outside Centre</option>
                     {% for plyr in twelth_players_collection %}
+                        {% if plyr.position == "Outside Centre" %}
                 <option value="{{plyr.player_name}}">{{plyr.player_name}}</option>
+                        {% endif %}
                  {% endfor %}
                     </select>
                 <label for="outside_centre">13</label>
@@ -133,7 +157,9 @@
                 <select id="left_wing" name="left_wing">
                     <option value="" disabled selected>Left Wing</option>
                     {% for plyr in thirteenth_players_collection %}
+                        {% if plyr.position == "Left Wing" %}
                 <option value="{{plyr.player_name}}">{{plyr.player_name}}</option>
+                        {% endif %}
                  {% endfor %}
                     </select>
                 <label for="left_wing">11</label>
@@ -142,7 +168,9 @@
                 <select id="full_back" name="full_back">
                     <option value="" disabled selected>Full Back</option>
                     {% for plyr in fithteenth_players_collection %}
+                        {% if plyr.position == "Fullback" %}
                 <option value="{{plyr.player_name}}">{{plyr.player_name}}</option>
+                        {% endif %}
                  {% endfor %}
                     </select>
                 <label for="full_back">15</label>
@@ -151,7 +179,9 @@
                 <select id="right_wing" name="right_wing">
                     <option value="" disabled selected>Right Wing</option>
                     {% for plyr in fourteenth_players_collection %}
+                        {% if plyr.position == "Right Wing" %}
                 <option value="{{plyr.player_name}}">{{plyr.player_name}}</option>
+                        {% endif %}
                  {% endfor %}
                     </select>
                 <label for="right_wing">14</label>
