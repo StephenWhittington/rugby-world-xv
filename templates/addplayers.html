@@ -4,7 +4,7 @@
     <form action="{{ url_for('add_player') }}" method="POST" class="col s12">
         <div class="row">
             <div class="input-field input-info col s6">
-                <input  id="player_name" name="player_name" type="text" class="validate">
+                <input id="player_name" name="player_name" type="text" class="validate">
                 <label for="player_name">Player Name</label>
             </div>
         </div>
@@ -22,8 +22,23 @@
         </div>
         <div class="row">
             <div class="input-field input-info col s6">
-                <input id="position" name="position" type="text" class="validate">
-                <label for="position">Position</label>
+                <select id="position" name="position">
+                    <option value="" disabled selected>Position</option>
+                    <option>Loosehead Prop</option>
+                    <option>Hooker</option>
+                    <option>Tighthead Prop</option>
+                    <option>Flanker</option>
+                    <option>Second Row</option>
+                    <option>Number 8</option>
+                    <option>Scrum Half</option>
+                    <option>Fly Half</option>
+                    <option>Inside Centre</option>
+                    <option>Outside Centre</option>
+                    <option>Left Wing</option>
+                    <option>Right Wing</option>
+                    <option>Fullback</option>
+                    </select>
+                <label for="position"></label>
             </div>
         </div>
         <div class="row">
@@ -32,7 +47,7 @@
                 <label for="height">Height</label>
             </div>
         </div>
-         <div class="row">
+        <div class="row">
             <button class="btn waves-effect waves-light" type="submit" name="action">Add Player
                 <i class="material-icons right">add_circle</i>
              </button>
