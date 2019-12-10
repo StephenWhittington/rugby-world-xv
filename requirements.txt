@@ -9,7 +9,6 @@ jinja2-time==0.2.0
 jmespath==0.9.4
 jsonschema==2.6.0
 pycrypto==2.6.1
-pygobject==3.26.1
 pylint==1.9.5
 pylint-flask==0.5
 pylint-plugin-utils==0.6
