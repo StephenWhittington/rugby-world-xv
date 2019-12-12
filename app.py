@@ -12,7 +12,6 @@ app.config["MONGO_URI"] = os.getenv("MONGO_URI")
 mongo = PyMongo(app)
 
 
-
 @app.route('/')
 @app.route('/create_team')
 def view_team():
