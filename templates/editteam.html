@@ -90,7 +90,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="input-field col s3">
+            <div class="input-field col s3  offset-s3">
                 <select id="number_eight" name="number_eight">
                     <option value="{{team.number_eight}}">{{team.number_eight}}</option>
                     {% for plyr in eighth_players_collection %}
@@ -103,7 +103,7 @@
             </div>
         </div>
         <div clas="row">
-            <div class="input-field col s3">
+            <div class="input-field col s3 offset-s3">
                 <select id="scrum_half" name="scrum_half">
                     <option value="{{team.scrum_half}}">{{team.scrum_half}}</option>
                     {% for plyr in ninth_players_collection %}
@@ -129,7 +129,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="input-field col s3">
+            <div class="input-field col s3 offset-s4">
                 <select id="inside_centre" name="inside_centre">
                     <option value="{{team.inside_centre}}">{{team.inside_centre}}</option>
                     {% for plyr in eleventh_players_collection %}
@@ -164,7 +164,7 @@
                     </select>
                 <label for="left_wing">11</label>
             </div>
-            <div class="input-field col s3">
+            <div class="input-field col s3 offset-s1">
                 <select id="full_back" name="full_back">
                     <option value="{{team.full_back}}">{{team.full_back}}</option>
                     {% for plyr in fourteenth_players_collection %}
@@ -175,7 +175,7 @@
                     </select>
                 <label for="full_back">15</label>
             </div>
-            <div class="input-field col s3">
+            <div class="input-field col s3 offset-s1">
                 <select id="right_wing" name="right_wing">
                     <option value="{{team.right_wing}}">{{team.right_wing}}</option>
                     {% for plyr in fithteenth_players_collection %}
