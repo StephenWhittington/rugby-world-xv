@@ -1,5 +1,5 @@
 import os
-from flask import Flask, session, render_template, redirect, request, url_for, request
+from flask import Flask, session, render_template, redirect, request, url_for, escape, request
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from dotenv import load_dotenv
@@ -14,6 +14,26 @@ mongo = PyMongo(app)
 
 
 @app.route('/')
+def index():
+    return render_template("index.html")
+    if 'username' in session:
+        return 'Logged in as %s' % escape(session['username'])
+    return 'You are not logged in'
+    
+@app.route('/login', methods=['POST'])
+def login():
+    user = mongo.db.users
+    user.insert_one(request.form.to_dict())
+    if request.method == 'POST':
+        session['username'] = request.form['username']
+        return redirect(url_for('index'))
+        
+@app.route('/logout')
+def logout():
+    session.pop('username', None)
+    return redirect(url_for('index'))
+
+
 @app.route('/create_team')
 def view_team():
     return render_template("team.html",
