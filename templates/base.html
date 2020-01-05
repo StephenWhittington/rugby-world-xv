@@ -16,18 +16,18 @@
     <header>
         <nav>
             <div class="nav-wrapper">
-                <a href="{{url_for('view_team')}}" class="brand-logo">Rugby World XV</a>
+                <a href="{{url_for('manage_team')}}" class="brand-logo">Rugby World XV</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="{{url_for('create_team')}}">Create Team</a></li>
-                    <li><a href="{{url_for('new_team')}}">Add Players</a></li>
+                    <li><a href="{{url_for('create_player')}}">Add Players</a></li>
                     <li><a href="{{url_for('manage_team')}}">Manage Team</a></li>
                 </ul>
             </div>
         </nav>
         <ul class="sidenav" id="mobile-demo">
             <li><a href="{{url_for('create_team')}}">Create Team</a></li>
-            <li><a href="{{url_for('new_team')}}">Add Players</a></li>
+            <li><a href="{{url_for('create_player')}}">Add Players</a></li>
             <li><a href="{{url_for('manage_team')}}">Manage Team</a></li>
         </ul>
     </header>

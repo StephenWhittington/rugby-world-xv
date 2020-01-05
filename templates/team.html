@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 <h3 class="header-text">Create Your Team</h3>
 <div class="row">
-    <form action="{{ url_for('add_team') }}" method="POST" class="col s12">
+    <form action="{{ url_for('create_team') }}" method="POST" class="col s12">
         <div class="row">
             <div class="input-field input-info col s6">
                 <input id="team_name" name="team_name" type="text" class="validate">

@@ -1,5 +1,5 @@
 import os
-from flask import Flask, session, render_template, redirect, request, url_for, request
+from flask import Flask, render_template, redirect, request, url_for, request
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from dotenv import load_dotenv
@@ -14,8 +14,28 @@ mongo = PyMongo(app)
 
 
 @app.route('/')
-@app.route('/create_team')
-def view_team():
+@app.route('/manage_team')
+def manage_team():
+    return render_template("manageteam.html",
+                            team=mongo.db.team.find())
+
+                            
+@app.route('/player/new', methods=['GET', 'POST'])
+def create_player():
+    if request.method == 'POST':
+        addplayers = mongo.db.players
+        addplayers.insert_one(request.form.to_dict())
+        return redirect(url_for('create_team'))        
+    return render_template("addplayers.html",
+                            addplayers=mongo.db.players.find())
+
+    
+@app.route('/team/new', methods=['GET', 'POST'])
+def create_team():
+    if request.method == 'POST':
+       team =  mongo.db.team
+       team.insert_one(request.form.to_dict())
+       return redirect(url_for('manage_team')) 
     return render_template("team.html",
                             first_players_collection=mongo.db.players.find(),
                             second_players_collection = mongo.db.players.find(),
@@ -32,34 +52,7 @@ def view_team():
                             thirteenth_players_collection = mongo.db.players.find(),
                             fourteenth_players_collection = mongo.db.players.find(),
                             fithteenth_players_collection = mongo.db.players.find())
-
                             
-@app.route('/new_team')
-def new_team():
-    return render_template("addplayers.html",
-                            addplayers=mongo.db.players.find())
-
-@app.route('/add_player', methods=['POST'])
-def add_player():
-    addplayers = mongo.db.players
-    addplayers.insert_one(request.form.to_dict())
-    return redirect(url_for('create_team'))
-    
-@app.route('/create_team')
-def create_team():
-    return render_template("team.html",
-                            first_players_collection=mongo.db.players.find())
-                            
-@app.route('/add_team', methods=['POST'])
-def add_team():
-    team =  mongo.db.team
-    team.insert_one(request.form.to_dict())
-    return redirect(url_for('manage_team'))
-    
-@app.route('/manage_team')
-def manage_team():
-    return render_template("manageteam.html",
-                            team=mongo.db.team.find())
 
 @app.route('/delete_team/<team_id>')
 def delete_team(team_id):
