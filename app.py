@@ -14,8 +14,8 @@ mongo = PyMongo(app)
 
 
 @app.route('/')
-@app.route('/manage_team')
-def manage_team():
+@app.route('/created/teams')
+def created_teams():
     return render_template("manageteam.html",
                             team=mongo.db.team.find())
 
@@ -35,7 +35,7 @@ def create_team():
     if request.method == 'POST':
        team =  mongo.db.team
        team.insert_one(request.form.to_dict())
-       return redirect(url_for('manage_team')) 
+       return redirect(url_for('created_teams')) 
     return render_template("team.html",
                             first_players_collection=mongo.db.players.find(),
                             second_players_collection = mongo.db.players.find(),
@@ -57,7 +57,7 @@ def create_team():
 @app.route('/delete_team/<team_id>')
 def delete_team(team_id):
     mongo.db.team.remove({'_id': ObjectId(team_id)})
-    return redirect(url_for('manage_team'))
+    return redirect(url_for('created_teams'))
     
 @app.route('/edit_team/<team_id>')
 def edit_team(team_id):
@@ -103,7 +103,7 @@ def update_team(team_id):
         'full_back':request.form.get('full_back'),
         'right_wing':request.form.get('right_wing')
     })
-    return redirect(url_for('manage_team'))
+    return redirect(url_for('created_teams'))
 
 
 if __name__ == '__main__':
