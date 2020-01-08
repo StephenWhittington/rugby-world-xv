@@ -11,4 +11,16 @@ mobile and desktop.
 
 ## UX Process
 
-[Link to my figma mockup]()
+[Link to my figma mockup](https://github.com/StephenWhittington/rugby-world-xv/blob/master/static/images/Pick%20Your%20World%20XV.png)
+
+I started with a desktop mockup using figma by focusing on the core aspects
+of what the user should experience, a well responsive and easy to use webpage.
+With easy navigation,forms and input fields for the user to experience, The user results
+then returned for them to read update or delete. The website is aimed at the fanbase of rugby
+but it is easily navigated by anyone.
+
+The user wants to be able to add players of their choice and create a team
+that is unique to them. And this webpage helps them do that with its simple layout
+and navigation, Also with its easy to use forms and input fields.
+
+
