@@ -1,14 +1,14 @@
-         ___        ______     ____ _                 _  ___  
-        / \ \      / / ___|   / ___| | ___  _   _  __| |/ _ \ 
-       / _ \ \ /\ / /\___ \  | |   | |/ _ \| | | |/ _` | (_) |
-      / ___ \ V  V /  ___) | | |___| | (_) | |_| | (_| |\__, |
-     /_/   \_\_/\_/  |____/   \____|_|\___/ \__,_|\__,_|  /_/ 
- ----------------------------------------------------------------- 
+# Rugby World XV
 
+## By Stephen Whittington
 
-Hi there! Welcome to AWS Cloud9!
+Rugby World XV is a single page application built with the flask
+web framework along with Mongodb for data storage. It allows users
+to import their favorite players and create an allstar/rugby world cup squad,
+which they can edit anytime and add as many players as they want.
+The site is easy to navigate with a simple layout and is responsive on
+mobile and desktop.
 
-To get started, create some files, play with the terminal,
-or visit https://docs.aws.amazon.com/console/cloud9/ for our documentation.
+## UX Process
 
-Happy coding!
+[Link to my figma mockup]()
