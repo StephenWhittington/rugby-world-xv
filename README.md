@@ -49,4 +49,14 @@ any player they want to replace with another then hit the edit team button,
 which then updates their team with the information selected and returns them
 to the home page to view the updated team.
 
+# Features 
+
+## Existing Features
+
+* **Responsive nav/sidebar** - A responsive and easy to use navbar that collapses into a side bar when screen is viewed
+on mobile.
+
+* **Collapsible Accordion** - A collapisble accordion that drops down and shows the users team
+with a rugby positons layout. 
+
 
