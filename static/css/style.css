@@ -37,3 +37,16 @@
 .team-name {
     font-size: 20px;
 }
+
+.col .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* --------------------------- Media Queries ------------------------------- */
+
+@media (max-width: 576px) {
+    nav .brand-logo {
+        font-size: 20px;
+    }
+}

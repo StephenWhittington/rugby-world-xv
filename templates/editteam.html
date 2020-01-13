@@ -3,13 +3,13 @@
 <div class="row">
     <form action="{{ url_for('update_team', team_id=team._id) }}" method="POST" class="col s12">
         <div class="row">
-            <div class="input-field input-info col s6">
+            <div class="input-field input-info col s12 col m6">
                 <input id="team_name" name="team_name" type="text" class="validate" value="{{team.team_name}}">
                 <label for="team_name">Team Name</label>
             </div>
         </div>
         <div class="row">
-            <div class="input-field col s4">
+            <div class="input-field col s12 col m4">
                 <select id="loose_head_prop" name="loose_head_prop">
                     <option value="{{team.loose_head_prop}}">{{team.loose_head_prop}}</option>
                     {% for plyr in first_players_collection %}
@@ -20,7 +20,7 @@
                 </select>
                 <label for="loose_head_prop">1</label>
             </div>
-            <div class="input-field col s4">
+            <div class="input-field col s12 col m4">
                 <select id="hooker" name="hooker">
                     <option value="{{team.hooker}}">{{team.hooker}}</option>
                     {% for plyr in second_players_collection %}
@@ -31,7 +31,7 @@
                     </select>
                 <label for="hooker">2</label>
             </div>
-            <div class="input-field col s4">
+            <div class="input-field col s12 col m4">
                 <select id="tight_head_prop" name="tight_head_prop">
                     <option value="{{team.tight_head_prop}}">{{team.tight_head_prop}}</option>
                     {% for plyr in third_players_collection %}
@@ -44,7 +44,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="input-field col s3">
+            <div class="input-field col s12 col m3">
                 <select id="blind_side_flanker" name="blind_side_flanker">
                     <option value="{{team.blind_side_flanker}}">{{team.blind_side_flanker}}</option>
                     {% for plyr in fourth_players_collection %}
@@ -55,7 +55,7 @@
                     </select>
                 <label for="blind_side_flanker">6</label>
             </div>
-            <div class="input-field col s3">
+            <div class="input-field col s12 col m3">
                 <select id="second_row" name="second_row">
                     <option value="{{team.second_row}}">{{team.second_row}}</option>
                     {% for plyr in fith_players_collection %}
@@ -66,7 +66,7 @@
                     </select>
                 <label for="second_row">4</label>
             </div>
-            <div class="input-field col s3">
+            <div class="input-field col s12 col m3">
                 <select id="second_row_2" name="second_row_2">
                     <option value="{{team.second_row_2}}">{{team.second_row_2}}</option>
                     {% for plyr in sixth_players_collection %}
@@ -77,7 +77,7 @@
                     </select>
                 <label for="second_row_2">5</label>
             </div>
-            <div class="input-field col s3">
+            <div class="input-field col s12 col m3">
                 <select id="open_side_flanker" name="open_side_flanker">
                     <option value="{{team.open_side_flanker}}">{{team.open_side_flanker}}</option>
                     {% for plyr in seventh_players_collection %}
@@ -90,7 +90,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="input-field col s3  offset-s3">
+            <div class="input-field col s12 col m3 offset-m3">
                 <select id="number_eight" name="number_eight">
                     <option value="{{team.number_eight}}">{{team.number_eight}}</option>
                     {% for plyr in eighth_players_collection %}
@@ -103,7 +103,7 @@
             </div>
         </div>
         <div clas="row">
-            <div class="input-field col s3 offset-s3">
+            <div class="input-field col s12 col m3 offset-m3">
                 <select id="scrum_half" name="scrum_half">
                     <option value="{{team.scrum_half}}">{{team.scrum_half}}</option>
                     {% for plyr in ninth_players_collection %}
@@ -116,7 +116,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="input-field col s3">
+            <div class="input-field col s12 col m3">
                 <select id="fly_half" name="fly_half">
                     <option value="{{team.fly_half}}">{{team.fly_half}}</option>
                     {% for plyr in tenth_players_collection %}
@@ -129,7 +129,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="input-field col s3 offset-s4">
+            <div class="input-field col s12 col m3 offset-m4">
                 <select id="inside_centre" name="inside_centre">
                     <option value="{{team.inside_centre}}">{{team.inside_centre}}</option>
                     {% for plyr in eleventh_players_collection %}
@@ -140,7 +140,7 @@
                     </select>
                 <label for="inside_centre">12</label>
             </div>
-            <div class="input-field col s3">
+            <div class="input-field col s12 col m3">
                 <select id="outside_centre" name="outside_centre">
                     <option value="{{team.outside_centre}}">{{team.outside_centre}}</option>
                     {% for plyr in twelth_players_collection %}
@@ -153,7 +153,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="input-field col s3">
+            <div class="input-field col s12 col m3">
                 <select id="left_wing" name="left_wing">
                     <option value="{{team.left_wing}}">{{team.left_wing}}</option>
                     {% for plyr in thirteenth_players_collection %}
@@ -164,7 +164,7 @@
                     </select>
                 <label for="left_wing">11</label>
             </div>
-            <div class="input-field col s3 offset-s1">
+            <div class="input-field col s12 col m3 offset-m1">
                 <select id="full_back" name="full_back">
                     <option value="{{team.full_back}}">{{team.full_back}}</option>
                     {% for plyr in fourteenth_players_collection %}
@@ -175,7 +175,7 @@
                     </select>
                 <label for="full_back">15</label>
             </div>
-            <div class="input-field col s3 offset-s1">
+            <div class="input-field s12 col m3 offset-m1">
                 <select id="right_wing" name="right_wing">
                     <option value="{{team.right_wing}}">{{team.right_wing}}</option>
                     {% for plyr in fithteenth_players_collection %}
