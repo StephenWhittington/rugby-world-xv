@@ -59,4 +59,26 @@ on mobile.
 * **Collapsible Accordion** - A collapisble accordion that drops down and shows the users team
 with a rugby positons layout. 
 
+* **Forms/Input fields** - Easy to read and understand forms and input fields for the user to navigate and enter
+their information. 
 
+* **Buttons** - Buttons when selected that either save/edit/delete or add to the database, also taking the user to the correct
+path.
+
+* **Background Image** - A background image of the most recent rugby world cup logo to add to the sites design.
+
+## Features Left To Implement 
+
+* Adding a flask session login for user security.
+
+* Add another page showing more information on players/teams
+
+# Technologies Used
+
+* [HTML5](https://en.wikipedia.org/wiki/HTML5)
+  
+    * The website uses Semantic Markup Language as its foundation.   
+
+* [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+
+    * The website uses Cascading Style Sheets to implement design and customization.
