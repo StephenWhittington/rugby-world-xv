@@ -124,3 +124,10 @@ path.
     2. Once the user has entered the player information they want, They can then click
     on the add player button which then saves the player to the database and takes them to the create team page.
     3. Confirmed that the player is added to the database and forwards the user to the create team page.
+
+1. **Create Team Form**:
+    1. The user fills out a form with a team name and the positions with the players they want in the team.
+    2. After the user has named a team and selected the players they want in the specific positions, They can
+    select save team which then saves the team to the database and the user is taken to the home page to view the results.
+    3. Confirmed that when form is filled in and the save team button is selected, it adds the result to the database
+    and takes the user to the home page.
