@@ -82,3 +82,30 @@ path.
 * [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 
     * The website uses Cascading Style Sheets to implement design and customization.
+    
+* [Python3](https://www.python.org/download/releases/3.0/)
+
+    * The website uses python3 a high-level, interpreted, interactive and object-oriented scripting language,
+    which is highly readable and uses English keywords frequently whereas the other languages use punctuations.
+    
+
+* [MongoDB](https://www.mongodb.com/)
+
+    * The website uses MongoDB for its cross-platform and open-source document-oriented database.
+    I have used this easy to use database to create,update,store and delete all of the information.
+    
+* [Materialize](https://materializecss.com/)
+
+    * For this website i decided to use Materialize instead of bootstrap, for its
+    reusable UI components that help in constructing attractive, consistent, 
+    and functional web pages and web apps while adhering to modern web design.
+    
+* [jQuery](https://jquery.com/)
+
+    * The website uses JQuery The Document Object Model (DOM) to simplify manipulation.
+
+# Testing 
+
+### User Story Tests Completed   
+    
+    
