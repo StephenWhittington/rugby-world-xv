@@ -131,3 +131,33 @@ path.
     select save team which then saves the team to the database and the user is taken to the home page to view the results.
     3. Confirmed that when form is filled in and the save team button is selected, it adds the result to the database
     and takes the user to the home page.
+
+1. **Side Navbar**:
+    1. Click on the nav icon when in mobile or tablet view.
+    2. A side bar showing the links is shown to the user and they can select which page they want to
+    visit.
+    3. Confirmed that the webpage has a responsive sidebar that is easy to use and goes to the correct paths.
+
+### How it looks/works on different browsers and screen sizes
+
+Testing my project on different screen sizes was easy with Meterialize, I started with
+a desktop layout and added styling for mobile towards the end of the project. I tested the page
+on the three most common web browsers Chrome/IE and Mozzila Firefox and i am happy
+with how it looks on all of them. The only things i had to change were the columns for
+the create team and update team pages to look better responsive on mobile and tablet.
+
+## Bugs And Problems
+
+I havent found any major bugs or issues with my project it works as it is supposed, but there
+is a minor issue with users being able to update delete or change others information.
+
+    * I understand that this can be fixed with a flask session/login that is linked to the
+    users username, that then will store that users data but only they can make changes to it.
+    
+## Compatibility
+
+To make sure users have a broad range of accessibility, i have tested my project on 3 major browsers in both desktop and mobile size.
+
+* Chrome
+* Mozilla Firefox
+* Internet Explorer
