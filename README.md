@@ -108,4 +108,19 @@ path.
 
 ### User Story Tests Completed   
     
-    
+1. **Collapsible-Accordion**:
+    1. Click on the arrow next to the del/edit buttons.
+    2. A callapsible body element showing the users selected team in a rugby 15 set up appears.
+    3. Confirmed that the when the user selects the arrow the information is shown.
+
+1. **Del/Edit Buttons**:
+    1. If the user selects the del or edit buttons.
+    2. A team is deleted when the delete button is selected, when the edit button is selected
+    the user can update any position with another player and update their team.
+    3. Confirmed that when the user selects any of the buttons it updates or deletes from the database.
+
+1. **Add Players Form**:
+    1. When the user fills in the required form.
+    2. Once the user has entered the player information they want, They can then click
+    on the add player button which then saves the player to the database and takes them to the create team page.
+    3. Confirmed that the player is added to the database and forwards the user to the create team page.
