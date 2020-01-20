@@ -198,3 +198,26 @@ The deployment and live version is hosted via Heroku:
     
     I logged into heroku via git with "heroku login" and deployed using the "git push heroku master" command which then
     pushed the code from the local repository master branch to my heroku remote.
+
+# Credits
+ 
+ **Content**
+ 
+ In this project I used a lot of materialize templates and forms which then i made my own by linking them to my
+ MongoDB database via key value pairs. Python and Jinja2 code was used to create easy for loops and if statements to access the correct
+ data for the user from the backend. My CSS styling was simple this time as i wanted to focus on the core aspect of being able to implement
+ the CRUD functionality, but maintain a responsive and easy readable page. Any problms i encounterd during the project I went to slack contacted
+ the tutors or sorced the answers myself.
+ 
+ **Media**
+ 
+ * The only media used in this project was the background image of the most recent rugby world cup logo, This image
+ is for educational purposes only.
+
+ **Acknowledgements**
+
+I received inspiration for this project from the flask mini project during the data centric module, I decided to use materialize
+instead of bootstrap for the layout as i like the simplicity of it. I then built the project using my own idea instead of the examples given
+and i feel like i understand python and jinja a lot better now using it based off my own inspiration.
+
+A huge thanks to my mentor Ignatius Ukwuoma for his time, suggestions, and constructive feedback for this project!
