@@ -88,7 +88,11 @@ path.
     * The website uses python3 a high-level, interpreted, interactive and object-oriented scripting language,
     which is highly readable and uses English keywords frequently whereas the other languages use punctuations.
     
+* [Flask](https://en.wikipedia.org/wiki/Flask_(web_framework))
 
+    * The website uses the Flask web framework to compile modules and libraries, and it helps develop
+    the web application without any low-level code.
+    
 * [MongoDB](https://www.mongodb.com/)
 
     * The website uses MongoDB for its cross-platform and open-source document-oriented database.
@@ -103,6 +107,11 @@ path.
 * [jQuery](https://jquery.com/)
 
     * The website uses JQuery The Document Object Model (DOM) to simplify manipulation.
+    
+* [Jinja2](https://en.wikipedia.org/wiki/Jinja_(template_engine))
+
+    * The website uses Jinja2 a web template engine for the Python programming language which
+    provides Python-like expressions while ensuring that the templates are evaluated in a sandbox.
 
 # Testing 
 
@@ -161,3 +170,18 @@ To make sure users have a broad range of accessibility, i have tested my project
 * Chrome
 * Mozilla Firefox
 * Internet Explorer
+
+## Testing my code via validation
+
+I ran all my code through both a CSS/HTML5 and Python-tester validator i had a few errors but my page works regardless of them. 
+I understand that most of the errors are due to jinja/python being used inside my html templates, which doesn't effect the project
+overall.
+
+* **base.html** -  I ran this page through [https://validator.w3.org/](https://validator.w3.org/) and encounterd 8 errors and 1 warning.
+* **addplayers.html** -  I ran this page through [https://validator.w3.org/](https://validator.w3.org/) and encounterd 3 errors and 1 warning.
+* **editteam.html** -  I ran this page through [https://validator.w3.org/](https://validator.w3.org/) and encounterd 66 errors and 1 warning.
+* **manageteam.html** -  I ran this page through [https://validator.w3.org/](https://validator.w3.org/) and encounterd 15 errors and 1 warning.
+* **team.html** -  I ran this page through [https://validator.w3.org/](https://validator.w3.org/) and encounterd 65 errors and 1 warning.
+
+* **style.css** -  I ran my code through [https://jigsaw.w3.org/css-validator/](https://jigsaw.w3.org/css-validator/) and had 0 errors.
+* **app.py** -  I ran my code through [https://extendsclass.com/python-tester.html](https://extendsclass.com/python-tester.html) the result was 0 syntax erros.
