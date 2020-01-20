@@ -190,11 +190,11 @@ overall.
 
 My source code was all done via GitHub, You can find my repository here:
     
-    * **Repository**:[https://github.com/StephenWhittington/rugby-world-xv](https://github.com/StephenWhittington/rugby-world-xv)
+* **Repository**:[https://github.com/StephenWhittington/rugby-world-xv](https://github.com/StephenWhittington/rugby-world-xv)
 
 The deployment and live version is hosted via Heroku:
 
-    * **Heroku**:[https://rugby-world-xv.herokuapp.com/](https://rugby-world-xv.herokuapp.com/)
+* **Heroku**:[https://rugby-world-xv.herokuapp.com/](https://rugby-world-xv.herokuapp.com/)
     
     I logged into heroku via git with "heroku login" and deployed using the "git push heroku master" command which then
     pushed the code from the local repository master branch to my heroku remote.
