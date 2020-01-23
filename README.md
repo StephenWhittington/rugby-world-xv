@@ -196,12 +196,23 @@ The deployment and live version is hosted via Heroku:
 
 * **Heroku**:[https://rugby-world-xv.herokuapp.com/](https://rugby-world-xv.herokuapp.com/)
     
-    * I logged into heroku via git with "heroku login" and deployed using the "git push heroku master" command which then
-    pushed the code from the local repository master branch to my heroku remote.
+    * First I created a new app and named it and set the region. 
     
-    * I then went to settings clicked on Config Vars and added my IP and PORT.
+    * Then I logged into heroku via git with "heroku login" and connected git to the new app location using
+    git remote.
+
+    * I then created a requirements.txt and Procfile:
+        
+        * 'sudo pip3 freeze > requirements.txt'
+        * 'echo web: python3 app.py > Procfile'
     
-    * I then did the same with my **MONGO URI and SECRET KEY** which are linked and hidden with a .env file in my repository.
+    * Then added all my project files using 'git add .' and commited with 'git commit -am "make it better"'
+    
+    * The project was then pushed using 'git push heroku master' and scaled the app dynos using 'heroku ps:scale web=1'.
+    
+    * I then went to Heroku settings clicked on Config Vars and added my IP and PORT.
+    
+    * I then did the same with my **MONGO URI and SECRET KEY** which are linked and hidden with a '.env' file in my repository.
     
 I can confirm that there are no differences from the deployed and the development version.
 
