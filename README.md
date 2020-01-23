@@ -201,14 +201,14 @@ The deployment and live version is hosted via Heroku:
     * Then I logged into heroku via git with "heroku login" and connected git to the new app location using
     git remote.
 
-    * I then created a requirements.txt and Procfile:
+    * I then created a `requirements.txt` and `Procfile`:
         
-        * 'sudo pip3 freeze > requirements.txt'
-        * 'echo web: python3 app.py > Procfile'
+        * `sudo pip3 freeze > requirements.txt`
+        * `echo web: python3 app.py > Procfile`
     
-    * Then added all my project files using 'git add .' and commited with 'git commit -am "make it better"'
+    * Then added all my project files using `git add .` and commited with `git commit -am "make it better"`
     
-    * The project was then pushed using 'git push heroku master' and scaled the app dynos using 'heroku ps:scale web=1'.
+    * The project was then pushed using `git push heroku master` and scaled the app dynos using `heroku ps:scale web=1`.
     
     * I then went to Heroku settings clicked on Config Vars and added my IP and PORT.
     
