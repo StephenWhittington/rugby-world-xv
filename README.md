@@ -202,10 +202,16 @@ The deployment and live version is hosted via Heroku:
     * I then went to settings clicked on Config Vars and added my IP and PORT.
     
     * I then did the same with my **MONGO URI and SECRET KEY** which are linked and hidden with a .env file in my repository.
+    
+I can confirm that there are no differences from the deployed and the development version.
 
 ## How Developers can download and work on my project
 
-
+    * Click on Clone or Download on my repository.
+    * Create an enviorment variable  
+    * Clone the project in your workspace using git clone
+    * Then add your own MONGO_URI and SECRET_KEY
+    * Make sure MONGO_URI and SECRET_KEY are added to a gitignore file.
 
 # Credits
  
