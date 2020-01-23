@@ -7,19 +7,21 @@ load_dotenv()
 
 app = Flask(__name__)
 
+""" Secret key and Mongo URI which is hidden on github and linked to heroku """
 app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
 app.config["MONGO_URI"] = os.getenv("MONGO_URI")
 
 mongo = PyMongo(app)
 
-
+""" Base route that loads the home page to show created teams """
 @app.route('/')
 @app.route('/created/teams')
 def created_teams():
     return render_template("manageteam.html",
                             team=mongo.db.team.find())
 
-                            
+""" Route and method that adds and saves to the player database and takes you to the
+create team page """
 @app.route('/player/new', methods=['GET', 'POST'])
 def create_player():
     if request.method == 'POST':
@@ -29,7 +31,8 @@ def create_player():
     return render_template("addplayers.html",
                             addplayers=mongo.db.players.find())
 
-    
+""" Route and method that saves a team to the (team) database, which calls on players
+that have been added from the add players page """
 @app.route('/team/new', methods=['GET', 'POST'])
 def create_team():
     if request.method == 'POST':
@@ -53,12 +56,14 @@ def create_team():
                             fourteenth_players_collection = mongo.db.players.find(),
                             fithteenth_players_collection = mongo.db.players.find())
                             
-
+""" Route and method that deletes a team from the database """
 @app.route('/delete_team/<team_id>')
 def delete_team(team_id):
     mongo.db.team.remove({'_id': ObjectId(team_id)})
     return redirect(url_for('created_teams'))
-    
+
+""" Route and method that calls on the created users team with the current players
+selected """
 @app.route('/edit_team/<team_id>')
 def edit_team(team_id):
     the_team =  mongo.db.team.find_one({"_id": ObjectId(team_id)})
@@ -81,6 +86,8 @@ def edit_team(team_id):
                            fourteenth_players_collection = mongo.db.players.find(),
                            fithteenth_players_collection = mongo.db.players.find())
 
+""" Route and method that updates a users change of player/players and takes them back to the home
+page to view the updated changes """
 @app.route('/update_team/<team_id>', methods=["POST"])
 def update_team(team_id):
     team = mongo.db.team
