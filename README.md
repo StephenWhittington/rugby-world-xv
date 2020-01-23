@@ -198,8 +198,8 @@ The deployment and live version is hosted via Heroku:
     
     * First I created a new app and named it and set the region. 
     
-    * Then I logged into heroku via git with "heroku login" and connected git to the new app location using
-    git remote.
+    * Then I logged into heroku via git with `heroku login` and connected git to the new app location using
+    `heroku git:remote`.
 
     * I then created a `requirements.txt` and `Procfile`:
         
@@ -210,9 +210,9 @@ The deployment and live version is hosted via Heroku:
     
     * The project was then pushed using `git push heroku master` and scaled the app dynos using `heroku ps:scale web=1`.
     
-    * I then went to Heroku settings clicked on Config Vars and added my IP and PORT.
+    * I then went to Heroku settings clicked on Config Vars and added my `IP` and `PORT`.
     
-    * I then did the same with my **MONGO URI and SECRET KEY** which are linked and hidden with a '.env' file in my repository.
+    * I then did the same with my **MONGO URI and SECRET KEY** which are linked and hidden with a `.env` file in my repository.
     
 I can confirm that there are no differences from the deployed and the development version.
 
