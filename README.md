@@ -196,8 +196,16 @@ The deployment and live version is hosted via Heroku:
 
 * **Heroku**:[https://rugby-world-xv.herokuapp.com/](https://rugby-world-xv.herokuapp.com/)
     
-    I logged into heroku via git with "heroku login" and deployed using the "git push heroku master" command which then
+    * I logged into heroku via git with "heroku login" and deployed using the "git push heroku master" command which then
     pushed the code from the local repository master branch to my heroku remote.
+    
+    * I then went to settings clicked on Config Vars and added my IP and PORT.
+    
+    * I then did the same with my **MONGO URI and SECRET KEY** which are linked and hidden with a .env file in my repository.
+
+## How Developers can download and work on my project
+
+
 
 # Credits
  
