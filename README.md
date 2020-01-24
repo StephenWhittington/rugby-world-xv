@@ -236,8 +236,8 @@ I can confirm that there are no differences from the deployed and the developmen
  
  **Media**
  
- * The only media used in this project was the background image of the most recent rugby world cup logo, This image
- is for educational purposes only.
+ * The only media used in this project was the background image of the most recent rugby world cup logo and a picture
+   of a rugby field, This images are for educational purposes only.
 
  **Acknowledgements**
 
