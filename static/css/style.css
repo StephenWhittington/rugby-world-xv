@@ -10,6 +10,21 @@
     justify-content: center;
 }
 
+.collapsible-body {
+    background: url("../images/rugby_pitch.png") center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+
+.list_size {
+    font-size: 18px;
+}
+
 .select-wrapper {
     background-color: white;
 }
