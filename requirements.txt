@@ -3,7 +3,7 @@ dnspython==1.16.0
 docutils==0.15.2
 Flask==1.1.1
 Flask-PyMongo==2.3.0
-Jinja2==2.10.3
+Jinja2==2.11.3
 jmespath==0.9.4
 jsonpatch==1.16
 pylint==1.8.1
